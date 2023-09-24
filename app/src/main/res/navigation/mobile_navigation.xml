@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_transform">
+
+    <fragment
+        android:id="@+id/nav_transform"
+        android:name="com.example.responsiveview.ui.transform.TransformFragment"
+        android:label="@string/menu_transform"
+        tools:layout="@layout/fragment_transform" >
+        <action
+            android:id="@+id/action_nav_transform_to_transform_detail"
+            app:destination="@id/nav_transform_detail"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_transform_detail"
+        android:name="com.example.responsiveview.ui.transform.TransformDetailFragment"
+        android:label="@string/menu_transform_detail"
+        tools:layout="@layout/fragment_transform_detail" >
+        <argument
+            android:name="extra_name"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_reflow"
+        android:name="com.example.responsiveview.ui.reflow.ReflowFragment"
+        android:label="@string/menu_reflow"
+        tools:layout="@layout/fragment_reflow" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.responsiveview.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.responsiveview.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
